@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.website{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card{
+  width: 90%;
+  max-width: 100%;
+  background-image: linear-gradient(rgb(81, 163, 207), rgb(1, 131, 143));
+  margin: 20px;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.search{
+  width: 100%;
+  padding-bottom: 15px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search p {
+  padding: 10px;
+  display: none;
+  font-style: italic;
+  color: rgb(227, 227, 227);
+}
+
+.search input{
+  border: 0;
+  outline: 0;
+  background: rgb(184, 183, 183);
+  color: white;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  height: 40px;
+}
+
+.search button{
+  border: 0;
+  outline: 0;
+  background: rgb(184, 183, 183);
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.date{
+  padding: 10px;
+  color: rgb(84, 219, 239);
+  font-size: 30px;
+}
+
+.temp{
+  padding: 5px;
+  color: white;
+  font-size: 30px;
+}
+
+.weather {
+  display: none;
+}
+
+.city{
+  padding: 5px;
+  color: white;
+  font-size: 30px;
+}
+
+.conditions{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.column{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.humidity{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 23px;
+}
+
+.wind{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 23px;
+}
+
+.saved-searches{
+  display: none;
+  padding-top: 74px;
+  color: rgb(226, 184, 228);
+}
+
+.search-title{
+  padding:5px;
+  font-style:italic;
+  text-align: left;
+}
+
+#history{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding:5px;
+  color: white;
+}
+
+.five-day{
+  display: none;
+  align-items: center;
+  width: 90%;
+  max-width: 100%;
+  background-image: linear-gradient( rgb(81, 163, 207),rgb(153, 118, 230));
+  margin: 20px;
+  margin-left: 63px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+}
+
+.tempy, .future-day {
+  padding: 5px;
+}
+
+.future-date {
+  font-size: 13px;
+  padding: 2px;
+}
+
+.windy .humid{
+  font-size: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+.resize{
+  width: 25px;
+  height: auto;
+}
+
+.clear {
+  text-align: left;
+  background-color: transparent;
+  border-color: pink;
+  color: pink;
+  border-radius: 20px;
+  padding: 5px;
+}
