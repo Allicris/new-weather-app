@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
+  <title>Sky Canva</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="background">
   <div class="website">
+    <header>What are the skies saying today . . .</header>
+    <div class="weather-info">
     <div class="card">
       <div class="search">
-        <input id="cityinput" type="text" placeholder="City" spellcheck="false">
+        <input id="cityinput" type="text" placeholder="City Name" spellcheck="false">
         <p class="error"> Invalid City Name</p>
-        <button>Search</button>
+        <button><img src="./assets/images/search.png"></button>
       </div>
       <div class="date"></div>
 
       <div class="weather">
-        <!-- <div class="date">August 19, 2023</div> -->
         <h1 class="city"></h1>
         <h2 class="temp"></h2>
         <img src="assets/images/partlycloudy.png" class="weather-icon">
@@ -30,28 +33,25 @@
             <img src="assets/images/humidity.png">
           </div>
           <div class="column">
-            <img src="assets/images/wind.png">
             <div>
               <p class="wind">15</p>
             </div>
+            <img src="assets/images/wind.png">
           </div>
         </div>
       </div>
       <div class="saved-searches">
-        <br>
-        <br>
+        <div class="search-handler">
         <div class="search-title">Saved Searches:</div>
         <button class="clear">Clear</button>
+      </div>
         <p id="history"></p>
-        <br>
-        <br>
       </div>
     </div>
 
     <div class="five-day">
     <div class="future-day">
       <div class="future-date">August 19, 2023</div>
-      <!-- <h1 class="city"></h1> -->
       <h2 class="tempy"></h2>
       <img class="resize" src="assets/images/partlycloudy.png" class="weather-icon">
       <div class="conditions">
@@ -154,7 +154,7 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
   </div>
   <script src="assets/javascript/script.js"></script>
 </body>

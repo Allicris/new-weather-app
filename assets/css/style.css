@@ -1,31 +1,50 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box;
+  font-family: "Merriweather", sans-serif;
+  /* box-sizing: border-box; */
 }
 
-.website{
-  display: flex;
+.background {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.website {
+  display: block;
   align-items: center;
   justify-content: space-between;
   text-align: center;
-}
-
-.card{
-  width: 90%;
-  max-width: 100%;
-  background-image: linear-gradient(rgb(81, 163, 207), rgb(1, 131, 143));
   margin: 20px;
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
 }
 
-.search{
+.website header {
+  font-family: 'Merriweather', serif;
+  font-size: 33px;
+  color: white;
+  padding: 40px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  width: 80%;
+  background-image: linear-gradient(rgb(81, 163, 207), rgb(76, 117, 199));
+  margin: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.search {
   width: 100%;
   padding-bottom: 15px;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -37,130 +56,159 @@
   color: rgb(227, 227, 227);
 }
 
-.search input{
+.search input {
   border: 0;
   outline: 0;
-  background: rgb(184, 183, 183);
-  color: white;
+  background: white;
+  color: rgb(111, 111, 111);
   padding: 5px;
-  padding-bottom: 10px;
   border-radius: 15px;
   height: 40px;
 }
 
-.search button{
+.search button {
   border: 0;
   outline: 0;
-  background: rgb(184, 183, 183);
+  background: white;
   color: white;
-  padding: 5px;
-  border-radius: 15px;
+  padding: 9px;
+  border-radius: 25px;
   height: 40px;
   cursor: pointer;
 }
 
-.date{
-  padding: 10px;
-  color: rgb(84, 219, 239);
-  font-size: 30px;
+.search button img {
+  max-width: 25px;
 }
 
-.temp{
+.date {
+  padding: 20px;
+  color: rgb(158, 235, 247);
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.city {
   padding: 5px;
+  padding-top: 35px;
   color: white;
   font-size: 30px;
+  font-family: 'Merriweather', serif;
+}
+
+.temp {
+  padding-bottom: 20px;
+  color: white;
+  font-size: 30px;
+  font-family: 'Merriweather', serif;
 }
 
 .weather {
   display: none;
 }
 
-.city{
-  padding: 5px;
-  color: white;
-  font-size: 30px;
+.weather-icon {
+  max-width: 50px;
+  padding: 10px;
 }
 
-.conditions{
+.conditions {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.column{
+.column {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 10px;
 }
 
-.humidity{
+.column img {
+  max-width: 40px;
+  padding-bottom: 13px;
+}
+
+.humidity {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  font-size: 23px;
+  font-size: 20px;
+  margin: 5px;
 }
 
-.wind{
+.wind {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  font-size: 23px;
+  font-size: 20px;
+  margin: 5px;
 }
 
-.saved-searches{
+.saved-searches {
   display: none;
-  padding-top: 74px;
+  font-family: 'Merriweather', serif;
+  padding-top: 35px;
   color: rgb(226, 184, 228);
 }
 
-.search-title{
-  padding:5px;
-  font-style:italic;
+.saved-searches button {
+  font-family: 'Merriweather', serif;
+}
+
+.search-handler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-title {
+  padding: 10px;
+  font-family: 'Merriweather', serif;
   text-align: left;
 }
 
-#history{
-  display: flex;
+#history {
+  display: grid;
   text-align: center;
-  justify-content: space-between;
-  padding:5px;
-  color: white;
+  padding-top: 15px;
+  color: rgb(218, 163, 215);
 }
 
-.five-day{
+.five-day {
   display: none;
   align-items: center;
-  width: 90%;
-  max-width: 100%;
-  background-image: linear-gradient( rgb(81, 163, 207),rgb(153, 118, 230));
+  width: 80%;
+  background-image: linear-gradient(rgb(81, 163, 207), rgb(153, 118, 230));
   margin: 20px;
-  margin-left: 63px;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   color: white;
-  text-align: center;
 }
 
 .tempy, .future-day {
-  padding: 5px;
+  padding: 15px;
 }
 
 .future-date {
-  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
   padding: 2px;
+  color: rgb(56, 68, 119);
 }
 
-.windy .humid{
+.windy .humid {
   font-size: 10px;
   text-align: center;
   padding: 5px;
 }
 
-.resize{
+.resize {
   width: 25px;
   height: auto;
 }
