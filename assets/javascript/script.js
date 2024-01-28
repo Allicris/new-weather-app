@@ -6,12 +6,54 @@ const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
 const searchContainer = document.querySelector('.saved-searches');
 const cityInput = document.getElementById('cityinput');
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const slider = document.querySelector(".slider");
+
+let slideIndex = 0;
+
+// Function to show the current slide
+function showSlide(index) {
+  const slides = document.querySelectorAll(".future-day");
+  slides.forEach((slide) => (slide.style.display = "none"));
+  slides[index].style.display = "block";
+}
+
+// Function to move to the next slide
+function nextSlide() {
+  if (slideIndex < slider.children.length - 1) {
+    slideIndex++;
+  } else {
+    slideIndex = 0; // Reset to the first slide
+  }
+  showSlide(slideIndex);
+}
+
+// Function to move to the previous slide
+function prevSlide() {
+  if (slideIndex > 0) {
+    slideIndex--;
+  } else {
+    slideIndex = slider.children.length - 1; // Move to the last slide
+  }
+  showSlide(slideIndex);
+}
+
+// Event listeners for next and previous buttons
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+// Show the initial slide
+showSlide(slideIndex);
+
 
 const savedSearches = [];
 
 const createHistoryElement = (cityInput) => {
+  const capitalizedCity = cityInput.charAt(0).toUpperCase() + cityInput.slice(1);
+
   const searchCityDiv = document.createElement('div');
-  const cityNameText = document.createTextNode(cityInput);
+  const cityNameText = document.createTextNode(capitalizedCity);
   searchCityDiv.appendChild(cityNameText);
   const historyContainer = document.getElementById('history');
   historyContainer.appendChild(searchCityDiv);
@@ -60,8 +102,7 @@ searchBtn.addEventListener("click", () => {
   currentWeather(searchCity.value);
   document.querySelector(".search p").style.display = "none";
   document.querySelector(".weather").style.display = "block";
-  document.querySelector(".five-day").style.display = "block";
-  document.querySelector(".saved-searches").style.display = "block";
+  document.querySelector(".right-side").style.display = "block";
 });
 
 async function currentWeather(city) {
