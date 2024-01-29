@@ -20,11 +20,10 @@
 }
 
 .website header {
-  font-family: "Merriweather", serif;
   font-size: 33px;
   color: white;
   padding: 40px;
-  display: inline-block;
+  display: block;
 }
 
 .weather-info {
@@ -33,7 +32,7 @@
   align-items: center;
 }
 
-.right-side {
+.right-card {
   display: none;
   justify-content: center;
   align-items: center;
@@ -41,7 +40,7 @@
   align-self: flex-start;
 }
 
-.card-one {
+.left-card {
   width: 80%;
   margin: 20px;
   padding: 30px;
@@ -53,7 +52,7 @@
   align-self: flex-start;
 }
 
-.card-two {
+.search-card {
   background-image: linear-gradient(rgb(153, 118, 230),  rgb(76, 117, 199));
   display: block;
   margin: 20px;
@@ -62,7 +61,7 @@
   text-align: center;
 }
 
-.search {
+.search-input {
   width: 100%;
   padding-bottom: 15px;
   display: flex;
@@ -70,14 +69,14 @@
   justify-content: space-between;
 }
 
-.search p {
+.search-input p {
   padding: 10px;
   display: none;
   font-style: italic;
   color: rgb(227, 227, 227);
 }
 
-.search input {
+.search-input input {
   border: 0;
   outline: 0;
   background: white;
@@ -87,7 +86,7 @@
   height: 40px;
 }
 
-.search button {
+.search-input button {
   border: 0;
   outline: 0;
   background: white;
@@ -98,11 +97,11 @@
   cursor: pointer;
 }
 
-.search button img {
+.search-input button img {
   max-width: 25px;
 }
 
-.date {
+.todays-date {
   padding: 20px;
   color: rgb(158, 235, 247);
   font-size: 30px;
@@ -124,7 +123,7 @@
   font-family: "Merriweather", serif;
 }
 
-.weather {
+.current-weather {
   display: none;
 }
 
@@ -191,7 +190,17 @@
 
 #history {
   padding-top: 15px;
+  padding: 10px;
   color: rgb(218, 163, 215);
+}
+
+#history div {
+  padding: 3px;
+}
+
+#history div:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .five-day {
@@ -288,7 +297,16 @@
   right: 0;
 }
 
+.prev-btn:hover {
+text-shadow: 4px 4px 4px white;
+}
+
+.next-btn:hover {
+  text-shadow: 4px 4px 4px white;
+}
+
 .search-scroll {
+  display: block;
   height: 70px;
   overflow: hidden;
   overflow-y: scroll;
